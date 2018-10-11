@@ -1,0 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${config.defaultZone}
+server:
+  port: ${config.serviceA.port}
+spring:
+  application:
+    name: service-provider

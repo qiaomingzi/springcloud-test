@@ -1,0 +1,9 @@
+config:
+  registryCenterA:
+    port: 8761
+  registryCenterB:
+    port: 8762
+spring:
+  profiles:
+    active: registryCenterA
+
