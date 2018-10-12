@@ -14,7 +14,7 @@ public class HelloControler {
     InvokerService invokerService;
 
     @RequestMapping(value = "/index")
-    public String index(@RequestParam String name) {
+    public String index(@RequestParam(defaultValue = "limz") String name) {
         return invokerService.invoker(name);
     }
 }

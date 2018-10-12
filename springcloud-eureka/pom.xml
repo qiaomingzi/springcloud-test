@@ -10,7 +10,7 @@
    </parent>
   <modules>
     <module>eureka-registry</module>
-    <module>eureka-service</module>
+   <module>eureka-service</module>
   </modules>
  
   <artifactId>springcloud-eureka</artifactId>
