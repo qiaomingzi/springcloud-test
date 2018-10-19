@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Created by fangzhipeng on 2017/4/6.
+ * Created by limz on 2017/4/6.
  */
 @FeignClient(value = "service-hi", fallback = SchedualServiceHiHystric.class)
 @Service

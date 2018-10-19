@@ -1,22 +1,24 @@
 package com.example.service;
 
+import com.example.bo.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
     @Value("${server.port}")
     String port;
 
-    @RequestMapping("/hi")
+    @RequestMapping("/home")
     public String home(@RequestParam String name) {
         return "hi " + name + ",i am from port:" + port;
+    }
+
+    @RequestMapping("/homeWithObj")
+    public String homeWithObj(@RequestBody Person person) {
+        return person.getName() + " say  :" + person.getContent();
     }
 
     @Autowired

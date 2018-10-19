@@ -1,4 +1,7 @@
 ## springcloud学习例子工程
+### 参考
+1. ![feigin上传附件](https://github.com/OpenFeign/feign-form)
+
 ### (1)springboot-test module
 用户学习springboot基础例子，
 1. test/com.example.server.HelloApplicationTests  测试MockMvc
@@ -33,7 +36,13 @@ mvn spring-boot:run -Dspring.profiles.active=serviceB
 http://localhost:7001/index 或者 http://localhost:7002/index 打印服务信息
 
 #### 3. 启动服务消费端(springcloud-ribbon)
+测试使用ribbon调用远程服务
 mvn spring-boot:run
-
 访问
 http://localhost:6001/index
+
+#### 4. 启动服务消费端(springcloud-feign)
+测试使用feign调用远程服务
+mvn spring-boot:run
+访问
+http://localhost:6002/index

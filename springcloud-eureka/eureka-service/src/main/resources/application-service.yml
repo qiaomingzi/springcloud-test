@@ -1,0 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: ${config.serviceA.port}
+spring:
+  application:
+    name: service-provider

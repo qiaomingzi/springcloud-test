@@ -12,7 +12,7 @@ public class InvokerService {
     RestTemplate restTemplate;
 
     public String invoker(String name) {
-        return restTemplate.getForObject("http://service-provider/hi?name=" + name, String.class);
+        return restTemplate.getForObject("http://service-provider/home?name=" + name, String.class);
     }
 
 }
